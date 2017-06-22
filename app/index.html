@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html>
   <head>
     <meta charset="utf-8">
     <title></title>
@@ -8,90 +8,257 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+    <link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="pAppApp">
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <body ng-app="pApp">
+    <!--[if lte IE 8]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
     <!-- Add your site or application content here -->
-    <div class="header" ng-cloak="">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
+    <div>
+      <div class="navbar navbar-default MenuStyle staticMenu"role="navigation">
+        <div>
           <div class="navbar-header">
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
+            <button type="button" class="navbar-toggle collapsed buttonCanvas" data-toggle="collapse" data-target="#js-navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#/">pApp</a>
+            <a class="navbar-brand" href="#/"><img class="logoUes" ng-src="images/LogoUes.png" alt="LogoUes"></a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <!-- //angularfire -->
-              <li><a ng-href="#/chat">chat</a></li>
-              <li>
-              <a ng-hide-auth="" href="#/login">log in</a>
-              <a ng-show-auth="" href="#/account">account</a>
-            </li>
-
+            <ul class="nav navbar-nav canvasMenuUes navText">
+               <li class="alignLiMenu"><a ng-href="#/">Inicio</a></li>
+              <li class="alignLiMenu dropdown"><a ng-href="#/" class="dropdown-toggle" data-toggle="dropdown" style="height: 61px">Quiénes Somos</a>
+                <ul class="dropdown-menu">
+                  <li><a ng-href="#/organigrama">Organigrama</a></li>
+                  <li><a ng-href="#/directorio">Directorio</a></li>
+                </ul>
+              </li>
+              <!--PLANEACION-->
+              <li class="alignLiMenu dropdown"><a ng-href="#/" class="dropdown-toggle" data-toggle="dropdown" style="height: 61px">Planeación</a>
+                <ul class="dropdown-menu">
+                  <li><a ng-href="/pdf/planeacion/PDI2015-2019.pdf" target="_blank">Programa de Desarrollo Institucional</a></a></li>
+                  <li><a ng-href="/pdf/planeacion/Programa Institucional de Medio Plazo 2016-2022.pdf" target="_blank">Programa Mediano Plazo</a></li>
+                  <li class="dropdown"><a ng-href="#/">Presupuesto Anual</a>
+                    <ul class="dropdown-menu sub-menu acreditacion">
+                      <li><a ng-href="#/">Ingresos</a>
+                          <ul class="dropdown-menu sub-menu3 acreditacion">
+                            <li><a ng-href="/pdf/planeacion/ingresos/ingresos2015.xlsx" download="ingresos2015" target="_blank">2015</a></a></li>
+                            <li><a ng-href="/pdf/planeacion/ingresos/ingresos2016.xlsx" download="ingresos2016" target="_blank">2016</a></li>
+                            <li><a ng-href="/pdf/planeacion/ingresos/ingresos2017.xlsx" download="ingresos2017" target="_blank">2017</a></li>
+                          </ul>
+                      </li>
+                      <li><a ng-href="#/">Egresos</a>
+                          <ul class="dropdown-menu sub-menu3 egresos">
+                              <li><a ng-href="/pdf/planeacion/egresos/egresos2015.xlsx" download="egresos2015" target="_blank">2015</a></li>
+                              <li><a ng-href="/pdf/planeacion/egresos/egresos2016.xlsx" download="egresos2016" target="_blank">2016</a></li>
+                              <li><a ng-href="/pdf/planeacion/egresos/egresos2017.xlsx" download="egresos2017" target="_blank">2017</a></li>
+                          </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a ng-href="http://poa.ues.mx/login.aspx" target="_blank">Sistema de Captura POA</a></li>
+                  <li><a ng-href="/pdf/planeacion/POA2017.pdf" target="_blank">Evaluación de Metas POA</a></li>
+                  <li class=" dropdown"><a ng-href="#/" class="dropdown-toggle" data-toggle="dropdown">Evaluación de Indicadores ETCA</a>
+                    <ul class="dropdown-menu sub-menu acreditacion">
+                        <li><a ng-href="/pdf/planeacion/etca/ETCA2015.xlsx" download="ETCA2015" target="_blank">2015</a></li>
+                        <li><a ng-href="/pdf/planeacion/etca/ETCA2016.xlsx" download="ETCA2016" target="_blank">2016</a></li>
+                        <li><a ng-href="/pdf/planeacion/etca/ETCA2017.xlsx" download="ETCA2017" target="_blank">2017</a></li>                                                
+                    </ul>
+                  </li>
+                  <li><a ng-href="#/sistemaIndicadoresProcedimientos">Sistema de Indicadores de Procedimientos</a></li>
+                  <li><a ng-href="/pdf/planeacion/estudiosInstitucionales.pdf" target="_blank">Estudios Institucionales</a></li>
+                  <li class="dropdown"><a ng-href="#/">Agenda Estratégica</a>
+                    <ul class="dropdown-menu sub-menu acreditacion" style="margin-top:-60px;">
+                      <li><a ng-href="#/sistemaIndicadoresProcedimientos">Captura de Evidencias</a></li>
+                      <li><a ng-href="/pdf/planeacion/agendaEstrategica/rectoria2017.xlsx" download="Rectoria2017" target="_blank">Rectoría</a></li>
+                      <li><a ng-href="/pdf/planeacion/agendaEstrategica/ua2017.xlsx" download="ua2017" target="_blank">San Luis Río Colorado</a></li>
+                      <li><a ng-href="/pdf/planeacion/agendaEstrategica/ua2017.xlsx" download="ua2017" target="_blank">Magdalena</a></li>
+                      <li><a ng-href="/pdf/planeacion/agendaEstrategica/ua2017.xlsx" download="ua2017" target="_blank">Hermosillo</a></li>
+                      <li><a ng-href="/pdf/planeacion/agendaEstrategica/ua2017.xlsx" download="ua2017" target="_blank">Benito Juárez</a></li>
+                      <li><a ng-href="/pdf/planeacion/agendaEstrategica/ua2017.xlsx" download="ua2017" target="_blank">Navojoa</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <!--NORMATIVIDAD-->
+              <li class="alignLiMenu"><a ng-href="#/normatividad">Normatividad</a></li>
+              <!--ACREDITACION-->
+              <li class="alignLiMenu dropdown"><a ng-href="#/" class="dropdown-toggle" data-toggle="dropdown" style="height: 61px">Acreditación</a>
+              <ul class="dropdown-menu">
+                  <li><a ng-href="#/organismosAcreditadores">Organismos Acreditadores</a></li>
+                  <li class=" dropdown"><a ng-href="#/" class="dropdown-toggle" data-toggle="dropdown">Acreditaciones</a>
+                    <ul class="dropdown-menu sub-menu acreditacion">
+                        <li><a ng-href="/pdf/acreditaciones/acreditaciones2015.zip" download="acreditaciones2015" target="_blank">2015</a></li>
+                        <li><a ng-href="/pdf/acreditaciones/acreditaciones2016.zip" download="acreditaciones2016" target="_blank">2016</a></li>                                                
+                    </ul>
+                  </li>
+                  <li><a ng-href="http://35.184.92.106:8000/accounts/login/?next=/" target="_blank">Plataforma de Acreditación</a></li>
+                </ul>
+              </li>
+              <!--SGC-->
+              <li class="alignLiMenu"><a ng-href="#/sgc">SGC</a></li>
+              <!--ESTADISTICA-->
+              <li class="alignLiMenu dropdown"><a ng-href="#/" class="dropdown-toggle" data-toggle="dropdown" style="height: 61px">Estadística</a>
+                  <ul class="dropdown-menu">
+                      <li><a ng-href="#/numeralia">Numeralia</a></li>
+                      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Documentos Estadísticos</a>
+                        <ul class="dropdown-menu sub-menu acreditacion">
+                        <li><a ng-href="/pdf/planeacion/estadistica/documentos-estadisticos/Agenda Estadística 2016.pdf" target="_blank">Agenda Estadística 2016</a></li>
+                        <li><a ng-href="/pdf/planeacion/estadistica/documentos-estadisticos/Agenda Estadística 2015.pdf" target="_blank">Agenda Estadística 2015</a></li>
+                        <li><a ng-href="/pdf/planeacion/estadistica/documentos-estadisticos/Agenda Estadística 2014.pdf" target="_blank">Agenda Estadística 2014</a></li>                                                
+                        </ul>
+                      </li>
+                      <li><a ng-href="#/series-estadisticas">Series Estadísticas</a></li>
+                      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Investigación Educativa</a>
+                      <ul class="dropdown-menu sub-menu2 acreditacion">
+                        <li><a>Aspirantes</a>
+                          <ul class="dropdown-menu sub-menu4 acreditacion">
+                          <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/aspirantes/Aspirantes2015.pdf" target="_blank">Aspirantes 2015</a></li>
+                          <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/aspirantes/Aspirantes2014.pdf" target="_blank">Aspirantes 2014</a></li>
+                          <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/aspirantes/Aspirantes2013.pdf" target="_blank">Aspirantes 2013</a></li>                                                
+                          </ul>
+                        </li>
+                        <li><a>Egresados</a>
+                          <ul class="dropdown-menu sub-menu4 inv-egresos">
+                          <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/egresados/Egresado2014.pdf" target="_blank">Egresados 2014</a></li>
+                          <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/egresados/Egresados2012.pdf" target="_blank">Egresados 2012</a></li>                                                
+                          </ul>
+                        </li>
+                        <li><a>Opinión</a>
+                          <ul class="dropdown-menu sub-menu4 inv-opinion">
+                          <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/opinion/Sociedad2014.pdf" target="_blank">Sociedad 2014</a></li>
+                          <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/opinion/Sociedad2013.pdf" target="_blank">Sociedad 2013</a></li>
+                          <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/opinion/Sociedad2012.pdf" target="_blank">Sociedad 2012</a></li>                                                
+                          </ul>
+                        </li>
+                        <li><a>Satisfacción Docente</a>
+                          <ul class="dropdown-menu sub-menu4 inv-docentes">
+                          <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/satisfaccion-docente/Docentes2016.pdf" target="_blank">Docentes 2016</a></li>
+                          <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/satisfaccion-docente/Docentes2015.pdf" target="_blank">Docentes 2015</a></li>
+                          <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/satisfaccion-docente/Docentes2013.pdf" target="_blank">Docentes 2013</a></li>                                                
+                          </ul>
+                        </li>
+                        <li><a>Satisfacción Estudiantes</a>
+                          <ul class="dropdown-menu sub-menu4 inv-estudiantes">
+                          <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/satisfaccion-estudiantes/Estudiantes2016.pdf" target="_blank">Estudiantes 2016</a></li>
+                          <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/satisfaccion-estudiantes/Estudiantes2015.pdf" target="_blank">Estudiantes 2015</a></li>
+                          <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/satisfaccion-estudiantes/Estudiantes2013.pdf" target="_blank">Estudiantes 2013</a></li>                                                
+                          </ul>
+                        </li>                                                
+                        </ul>
+                        </li>
+                      <li><a ng-href="#/sieues">SIEUES</a></li>
+                      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Prontuarios Estadísticos</a>
+                      <ul class="dropdown-menu sub-menu acreditacion">
+                      <li><a ng-href="/pdf/planeacion/estadistica/prontuarios/prontuario2016-1.pptx" download="prontuario2016-1" target="_blank">2016-1</a></li>
+                      <li><a ng-href="/pdf/planeacion/estadistica/prontuarios/prontuario2016-2.pptx" download="prontuario2016-2" target="_blank">2016-2</a></li>
+                      <li><a ng-href="/pdf/planeacion/estadistica/prontuarios/prontuario2017-1.pptx" download="prontuario2017-1" target="_blank">2017-1</a></li>                                                
+                      </ul>
+                    </li>
+                  </ul>
+              </li>
+              <!--FONDOS-->
+              <li class="alignLiMenu "><a ng-href="http://www.ues.mx/pagina.aspx?p=24&s=1#" target="_blank"  style="height: 61px">Fondos</a>
+                <!--<ul class="dropdown-menu">
+                  <li><a ng-href="#/fondosExtraordinarios">Fondos Ext.</a></li>
+                  <li><a ng-href="#/">PIFI</a></li>
+                  <li><a ng-href="#/">PROFOCIE</a></li>
+                  <li><a ng-href="#/">FAM</a></li>
+                </ul>-->
+              </li>
+              <!--TRANSPARENCIA-->
+             <li class="alignLiMenu dropdown"><a ng-href="#/" class="dropdown-toggle" data-toggle="dropdown" style="height: 61px">Transparencia</a>
+               <ul class="dropdown-menu">
+                  <li><a ng-href="#/" target="_blank">Plataforma Nacional de Transpatencia</a></li>
+                  <li><a ng-href="#/" target="_blank">Plataforma de Transparencia Sonora</a></li>
+                  <li><a ng-href="#/" target="_blank">INFOMEX</a></li>                                                
+              </ul>
+             </li>
+              <!--BLOG-->
+             <li class="alignLiMenu"><a ng-href="#/blog">Blog</a></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="container">
+    <div class="inner"></div>
+    <div class="">
     <div ng-view=""></div>
     </div>
-
-    <div class="footer">
+    
+    <div class="footer footerUes">
       <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team and Firebase</p>
+        <p class="footerText"><span class="glyphicon glyphicon-education pull-left"></span>Universidad Estatal de Sonora<span class="glyphicon glyphicon-education pull-right"></span></p>
       </div>
     </div>
-
-
+    <div id="container">
+        <canvas id="canvas"></canvas>
+    </div>
+    
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
        (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
        r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
        ga('create', 'UA-XXXXX-X');
        ga('send', 'pageview');
     </script>
-
+    
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+    <!--<script src="node_modules/angularfire/dist/angularfire.min.js"></script>-->
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAxcSQlK0xbrzyenmaCeJ6_PUaKLqum3G8",
+        authDomain: "blogues-5b4c4.firebaseapp.com",
+        databaseURL: "https://blogues-5b4c4.firebaseio.com",
+        projectId: "blogues-5b4c4",
+        storageBucket: "blogues-5b4c4.appspot.com",
+        messagingSenderId: "741230668306"
+      };
+      firebase.initializeApp(config);
+    </script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>    
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/angularfire/config.js"></script>
-        <script src="scripts/angularfire/firebase.ref.js"></script>
-        <script src="scripts\controllers\chat.js"></script>
-        <script src="scripts\filters\reverse.js"></script>
-        <script src="scripts/angularfire/auth.js"></script>
-        <script src="scripts\controllers\login.js"></script>
-        <script src="scripts\controllers\account.js"></script>
-        <script src="scripts/directives/ngShowAuth.js"></script>
-        <script src="scripts/directives/ngHideAuth.js"></script>
-        <script src="scripts\routes.js"></script>
+        <script src="scripts/controllers/inicio.js"></script>
+        <script src="scripts/controllers/organigrama.js"></script>
+        <script src="scripts/controllers/sgc.js"></script>
+        <script src="scripts/controllers/normatividad.js"></script>
+        <script src="scripts/controllers/blog.js"></script>
+        <script src="scripts/controllers/blogAdministrator.js"></script>
+        <!--<script src="scripts/services/blogFirebase.js"></script>-->
         <!-- endbuild -->
 </body>
 </html>
