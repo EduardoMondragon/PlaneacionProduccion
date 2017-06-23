@@ -7,7 +7,7 @@
  * Controller of the pApp
  */
 angular.module('pApp')
-.controller('BlogAdministratorCtrl', function ($scope, $rootScope) {
+.controller('BlogAdministratorCtrl', function ($scope, $rootScope, $timeout) {
     var vm = this;
 
     //BLOCK DECLARATION
@@ -22,7 +22,9 @@ angular.module('pApp')
     vm.login = login;
     vm.logOut = logOut;
 
-
+    $timeout(function(){
+        $rootScope.$apply();
+    },1000);
     $('#load').on('click', function() {
         var $this = $(this);
         $this.button('loading');
@@ -136,7 +138,7 @@ angular.module('pApp')
             showConfirmButton: false
         });
     }
-
+    vm.readFile = readFile;
     function readFile() {
   
         if (this.files && this.files[0]) {
@@ -153,7 +155,7 @@ angular.module('pApp')
         $('.imgSelect').css("display","block");
         $('.imgSelect').addClass("animated imgBlog");
     }
-    document.getElementById("inpImage").addEventListener("change", readFile);
+    // document.getElementById("inpImage").addEventListener("change", readFile);
  
     function readSimpleFile() {
   
@@ -171,5 +173,5 @@ angular.module('pApp')
         $('.imgSelectSimple').css("display","block");
         $('.imgSelectSimple').addClass("animated imgBlog");
     }
-    document.getElementById("inpImageSimple").addEventListener("change", readSimpleFile);
+    // document.getElementById("inpImageSimple").addEventListener("change", readSimpleFile);
 });

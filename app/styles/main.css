@@ -1351,10 +1351,24 @@ border:  none;
   margin-bottom: 10px;
 }
 #inpImage{
-  display: none;
+    display: block;
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 #inpImageSimple{
-  display: none;
+    display: block;
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 #b64{
   display: none;

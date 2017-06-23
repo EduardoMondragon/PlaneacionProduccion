@@ -4,7 +4,7 @@
 LOGIN
 ===============================================
 -->
-<div class="bgLogin" ng-show="!vm.switchLogin">
+<div class="bgLogin" ng-if="!vm.switchLogin">
 <form action="">
     <div class="boxLoginBlog">
         <img src="/images/LogoUes.png" class="center-block imgLoginBlog" alt="logo">
@@ -26,7 +26,7 @@ LOGIN
 ADMINISTRACIÓN
 ===============================================
 -->
-<div class="bgLoginAdministrator" ng-hide="!vm.switchLogin">
+<div class="bgLoginAdministrator" ng-if="vm.switchLogin">
     <button class="btn btn-default  pull-right" style="margin-right:65px;" ng-click="vm.logOut()">salir</button>
     <!-- 
     ==================
@@ -55,8 +55,9 @@ ADMINISTRACIÓN
     <form novalidate name="form">
                 <div class="col-xs-9 inputsInner">
                     <div class="input-group inputsInner">
-                        <button class="btn btn-primary" type="button" id="upload" >Seleccionar Imagen <i class="fa fa-picture-o"></i></button>
-                        <input id="inpImage" type='file'>
+                        <button class="btn btn-primary" type="button" id="upload" >Seleccionar Imagen <i class="fa fa-picture-o"></i>
+                            <input id="inpImage" type='file' onchange="angular.element(this).scope().vm.readFile(this)">
+                        </button>
                         <p id="b64"></p>
                     </div>
                     <!-- 
@@ -145,8 +146,9 @@ ADMINISTRACIÓN
     <form novalidate name="formSimple">
                 <div class="col-xs-9 inputsInner">
                     <div class="input-group inputsInner">
-                        <button class="btn btn-success" type="button" id="uploadSimple" >Seleccionar Imagen <i class="fa fa-picture-o"></i></button>
-                        <input id="inpImageSimple" type='file'>
+                        <button class="btn btn-success" type="button" id="uploadSimple" >Seleccionar Imagen <i class="fa fa-picture-o"></i>
+                            <input id="inpImageSimple" type='file' onchange="angular.element(this).scope().vm.readFile(this)">
+                        </button>
                         <p id="b64Simple"></p>
                     </div>
                     <!-- 
