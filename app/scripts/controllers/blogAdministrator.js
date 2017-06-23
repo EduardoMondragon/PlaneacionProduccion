@@ -139,9 +139,9 @@ angular.module('pApp')
         });
     }
     vm.readFile = readFile;
-    function readFile() {
+    function readFile(file) {
   
-        if (this.files && this.files[0]) {
+        if (file.files && file.files[0]) {
             var FR= new FileReader();
             FR.addEventListener("load", function(e, imageConverted) {
 
@@ -150,16 +150,16 @@ angular.module('pApp')
                 imageConverted = document.getElementById("b64").innerHTML = e.target.result;
                 vm.newsImage = imageConverted;
             }); 
-            FR.readAsDataURL( this.files[0] );
+            FR.readAsDataURL( file.files[0] );
         }
         $('.imgSelect').css("display","block");
         $('.imgSelect').addClass("animated imgBlog");
     }
     // document.getElementById("inpImage").addEventListener("change", readFile);
- 
-    function readSimpleFile() {
+    vm.readFileTradicional = readSimpleFile;
+    function readSimpleFile(file) {
   
-        if (this.files && this.files[0]) {
+        if (file.files && file.files[0]) {
             var FR= new FileReader();
             FR.addEventListener("load", function(e, imageConverted) {
 
@@ -168,7 +168,7 @@ angular.module('pApp')
                 imageConverted = document.getElementById("b64Simple").innerHTML = e.target.result;
                 vm.newsImageSimple = imageConverted;
             }); 
-            FR.readAsDataURL( this.files[0] );
+            FR.readAsDataURL( file.files[0] );
         }
         $('.imgSelectSimple').css("display","block");
         $('.imgSelectSimple').addClass("animated imgBlog");
