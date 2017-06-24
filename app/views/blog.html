@@ -14,7 +14,7 @@ BIG CARD
             <div class="wrapper" style="background-image: url('{{ vm.noticia.image }}');">
                 <div class="headerBlog">
                     <div class="date">
-                        <span>{{ vm.newsPublicationDate|date:yy/mm/dd }}</span>
+                        <span>{{ vm.noticia.date|date:yy/mm/dd }}</span>
                     </div>
                 </div>
                 <div class="data">
@@ -34,12 +34,12 @@ BIG CARD
     SMALL CARD
     ==================
     -->
-   <div class="col-xs-4 innerBottomOn " ng-repeat="new in vm.dataArray">
+   <div class="col-xs-4 innerBottomOn " ng-repeat="new in vm.dataArray | orderBy:'-date'">
          <div class="example-2 card blog">
             <div class="wrapper" style="background-image: url('{{ new.image }}');">
                 <div class="headerBlog">
                      <div class="date">
-                        <span>{{vm.newsPublicationDate|date:yy/mm/dd}}</span>
+                        <span>{{ new.date|date:yy/mm/dd }}</span>
                     </div>
                 </div>
                 <div class="data">

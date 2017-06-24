@@ -111,7 +111,8 @@ angular.module('pApp')
             image: vm.newsImage,
             title: vm.newsTitle,
             author: vm.autorName,
-            text: vm.newsText
+            text: vm.newsText,
+            date: new Date()
         });
         swal({
             title: "Noticia Publicada !",
@@ -128,7 +129,8 @@ angular.module('pApp')
             image: vm.newsImageSimple,
             title: vm.newsTitleSimple,
             author: vm.autorNameSimple,
-            text: vm.newsTextSimple
+            text: vm.newsTextSimple,
+            date: new Date()
         });
         swal({
             title: "Noticia Publicada !",
