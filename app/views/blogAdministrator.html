@@ -5,21 +5,25 @@ LOGIN
 ===============================================
 -->
 <div class="bgLogin" ng-if="!vm.switchLogin">
-<form action="">
-    <div class="boxLoginBlog">
-        <img src="/images/LogoUes.png" class="center-block imgLoginBlog" alt="logo">
-         <div class="input-group inputGroupLoginBlog">
-            <span class="input-group-addon inputSpanLoginBlog spanLoginBlog"><i class="glyphicon glyphicon-user"></i></span>
-            <input type="email" placeholder="usuario" ng-model="vm.email" class="form-control inputSpanLoginBlog inputLoginBlog" required>
-        </div>
-         <div class="input-group inputGroupLoginBlog">
-            <span class="input-group-addon inputSpanLoginBlog spanLoginBlog"><i class="glyphicon glyphicon-lock"></i></span>
-            <input type="password" placeholder="contraseña" ng-model="vm.password" class="form-control inputSpanLoginBlog inputLoginBlog" required>
-        </div>
-       
-        <button class="btn btn-success btn-block btn-lg" type="submit" ng-click="vm.login()" id="load" data-loading-text="<i class='fa fa-spinner fa-spin '></i>">Acceder</button>
+<div class="row">
+    <div class="col-xs-12">
+        <form action="">
+            <div class="boxLoginBlog">
+                <img src="/images/LogoUes.png" class="center-block imgLoginBlog" alt="logo">
+                <div class="input-group inputGroupLoginBlog">
+                    <span class="input-group-addon inputSpanLoginBlog spanLoginBlog"><i class="glyphicon glyphicon-user"></i></span>
+                    <input type="email" placeholder="usuario" ng-model="vm.email" class="form-control inputSpanLoginBlog inputLoginBlog" required>
+                </div>
+                <div class="input-group inputGroupLoginBlog">
+                    <span class="input-group-addon inputSpanLoginBlog spanLoginBlog"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input type="password" placeholder="contraseña" ng-model="vm.password" class="form-control inputSpanLoginBlog inputLoginBlog" required>
+                </div>
+            
+                <button class="btn btn-success btn-block btn-lg" type="submit" ng-click="vm.login()" id="load" data-loading-text="<i class='fa fa-spinner fa-spin '></i>">Acceder</button>
+            </div>
+        </form>
     </div>
-</form>
+</div>
 </div>
 <!-- 
 ===============================================

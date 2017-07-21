@@ -32,8 +32,18 @@ angular.module('pApp')
             $this.button('reset');
         }, 2000);
     });
+
+    function userValidation(firebaseUser){
+        if (firebaseUser) {
+                //console.log("logeado exitoso con id :", firebaseUser.uid);
+                vm.switchLogin = true;
+                $rootScope.$apply();
+            } else {
+                //console.log("imposible acceder")
+            }
+    };
+    
     function login(){
-        
         firebase.auth().signInWithEmailAndPassword(vm.email, vm.password).catch(function(error) {
             // Handle Errors here.
             var errorCode = error.code;
@@ -41,19 +51,12 @@ angular.module('pApp')
             console.log(errorCode);
             console.log(error.message);
         });
-        firebase.auth().onAuthStateChanged(firebaseUser => {
-            if (firebaseUser) {
-                console.log("logeado exitoso con id :", firebaseUser.uid);
-                vm.switchLogin = true;
-                $rootScope.$apply();
-            } else {
-                console.log("valio verga we!")
-            }
-        })
-            
-        
+        firebase.auth().onAuthStateChanged(userValidation);
+           
     }
-  
+    
+    
+
     function logOut(){
         firebase.auth().signOut();
         vm.switchLogin = false;

@@ -2,8 +2,9 @@
     <h4 class="estasAquiTexto">
         <strong class="estasAquiColor">Estás aquí :</strong> inicio / <span class="ubicacionNavegacion">Blog</span><!--<a class="btn btn-default pull-right" ng-href="#/blogAdministrator">administrator</a>--></h4>  
 </div>
-
-<div class="row myContainer innerTopOn">
+<div class="backgroundLoaderBlog" id="backgroundLoaderBlog"></div>
+<div class="loaderBlog" id="loader"></div>
+<div class="row myContainer innerTopOn" id="containerBlog" ng-show="vm.switchLoader">
 <!-- 
 ==================
 BIG CARD
@@ -22,7 +23,7 @@ BIG CARD
                         <span class="author">{{ vm.noticia.author }}</span>
                         <h1 class="blogTitle" data-toggle="modal" data-target="#BlogModal">{{ vm.noticia.title | limitTo:90 }}</h1>
                         <p class="text">{{vm.noticia.text | limitTo:200 }}</p>
-                        <p class="button" data-toggle="modal" data-target="#BlogModal">Leer Más</p>
+                        <p class="button leerMasBlog" data-toggle="modal" data-target="#BlogModal">Leer Más</p>
                     </div>
                 </div>
             </div>
@@ -34,7 +35,7 @@ BIG CARD
     SMALL CARD
     ==================
     -->
-   <div class="col-xs-4 innerBottomOn " ng-repeat="new in vm.dataArray | orderBy:'-date'">
+   <div class="col-xs-4 innerBottomOn resposiveDiv" ng-repeat="new in vm.dataArray | orderBy:'-date'">
          <div class="example-2 card blog">
             <div class="wrapper" style="background-image: url('{{ new.image }}');">
                 <div class="headerBlog">
@@ -47,7 +48,7 @@ BIG CARD
                         <span class="author">{{ new.author }}</span>
                         <h1 class="blogTitle" data-toggle="modal" data-target="#BlogModalTradicional" ng-click="vm.selectNew(new)">{{ new.title | limitTo:40 }}</h1>
                         <p class="text">{{ new.text | limitTo:200 }}</p>
-                        <p  class="button" data-toggle="modal" data-target="#BlogModalTradicional" ng-click="vm.selectNew(new)">Leer Más</p>
+                        <p  class="button leerMasBlog" data-toggle="modal" data-target="#BlogModalTradicional" ng-click="vm.selectNew(new)">Leer Más</p>
                     </div>
                 </div>
             </div>

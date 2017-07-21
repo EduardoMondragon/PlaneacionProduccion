@@ -1,14 +1,20 @@
 <script>
     $(document).ready(function () { //  this function send top page after load
-        $(window).scrollTop(0);
+        $(window).scrollTop(0); 
+        if($(window).width() < 742){
+            $(".myContainer").css({
+                "margin":"10px",
+                "margin-bottom":"20px"
+            });
+        }     
     }); 
 </script>
-<div class="estasAqui">
+<div class="estasAqui" id="estasAqui">
     <h4 class="estasAquiTexto">
         <strong class="estasAquiColor">Estás aquí :</strong> Quienes Somos / <span class="ubicacionNavegacion">Directorio</span></h4>  
 </div>
 <div class="myContainer animated zoomInUp subTitleSpace innerBottomOn innerTopOn">
-    <table class="table table-bordered table-hover table-responsive table-striped box-shadow">
+    <table id="table1" class="table table-bordered table-hover table-responsive table-striped box-shadow">
         <thead class="dirTableFont">
             <tr>
                 <th class="text-center" colspan="4" style="background-color: black; opacity: 0.8; color: white;">Personal de Planeación</th>
@@ -79,7 +85,7 @@
     </table>
     
     
-    <table class="table table-bordered table-hover table-responsive table-striped box-shadow">
+    <table id="table2" class="table table-bordered table-hover table-responsive table-striped box-shadow">
         <h2 class="text-center"></h2>
         <thead class="dirTableFont">
             <tr>

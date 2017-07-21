@@ -13,14 +13,21 @@ angular.module('pApp')
 var vm = this;
  vm.switchSecondRow = true; 
  
- $(document).ready(function () { //  this function send top page after load
+ $(document).ready(function ($) { //  this function send top page after load
     $(window).scrollTop(0);
+    if($(window).width() < 724){ 
+        $(".myContainer").css("margin","10px");
+        $(".orgNameResponsive").css({
+            "margin":"10px",
+            "margin-bottom":"20px",
+            "padding-left":"0px",
+            "width":"100%", 
+        });
+    }
 }); 
 
 //public functions
-
 //private functions
-
 
 /*
 ====================
@@ -65,5 +72,6 @@ window.onscroll = function(){imagesAnimated()};
                     document.getElementById("unknow").className = "animated imgOrgOut  figure";   
                 }   
             } 
-        }        
+        }
+       
 });
