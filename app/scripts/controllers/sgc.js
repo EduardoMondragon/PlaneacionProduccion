@@ -10,15 +10,21 @@
 angular.module('pApp')
     .controller('ScgCtrl', function () {
         var vm = this;
-
-
-
+        vm.language = false;
         $(document).ready(function ($) {
             if ($(window).width() < 724) {
+                 $(".flagsSgc").css({
+                    "margin-right":"-20px",
+                    "padding-left":"10px",
+                    "width":"30px",
+                    "margin-top":"-4px"
+                });
+                $("#flags").removeClass("pull-right")
                 $(".banner").css({
                     "margin": "0px",
                     "margin-top": "3px",
                     "padding": "14px",
+                    " width":"30px"
                 });
                 $("#imgMision").removeClass("visibilityHidden").addClass("sgcImages");
                 $("#textMision").removeClass("visibilityHidden").addClass("colXs6Responsive sgcTextImages");
@@ -100,6 +106,14 @@ angular.module('pApp')
                 }
             }
         });
+
+        vm.flagAnimationClik = () => {
+        $('#flags').addClass("animated flipInX");
+        setTimeout( function(){
+            $('#flags').removeClass("animated flipInX");            
+        },700)
+        
+    }
 
 
     });

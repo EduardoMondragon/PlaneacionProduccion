@@ -6,8 +6,8 @@
   <title></title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="./images/LogoUes.png" type="image/x-icon" />
-  <link rel="shortcut icon" href="./images/LogoUes.png" type="image/x-icon" />
+  <link rel="icon" href=".images/LogoUes.png" type="image/x-icon" />
+  <link rel="shortcut icon" href=".images/LogoUes.png" type="image/x-icon" />
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
@@ -23,7 +23,7 @@
   <!-- endbuild -->
 </head>
 
-<body ng-app="pApp">
+<body ng-app="pApp" ng-controller="AppCtrl as vm">
   <!--[if lte IE 8]>
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -40,7 +40,7 @@
               <span class="icon-bar"></span>
             </button>-->
 
-          <a class="navbar-brand" href="#/"><img class="logoUes" src="./images/LogoUes.png" alt="LogoUes"></a>
+          <a class="navbar-brand" href="#/"><img class="logoUes" src=".images/LogoUes.png" alt="LogoUes"></a>
         </div>
 
         <div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -213,14 +213,14 @@
             -->
   <div id="main-nav" class="stellarnav">
     
-    <a class="navbar-brand" href="#/" id="imgDesktopMenu"><img class="logoUes" src="./images/LogoUes.png" alt="LogoUes"></a>
-    <ul>
+    <a class="navbar-brand" href="#/" id="imgDesktopMenu"><img class="logoUes" src="images/LogoUes.png" alt="LogoUes"></a>
+    <ul id="x">
       <!--
                 ===================
                 =      INICIO     =
                 ===================
                 -->
-      <li><a ng-href="#/">Inicio</a></li>
+      <li class="unique"><a ng-href="#/">Inicio</a></li>
       <!--
                 ===================
                 =  QUIENES SOMOS  =
@@ -228,8 +228,8 @@
                 -->
       <li><a ng-href="#/">Quiénes Somos</a>
         <ul>
-          <li><a ng-href="#/organigrama">Organigrama</a></li>
-          <li><a ng-href="#/directorio">Directorio</a></li>
+          <li class="unique"><a ng-href="#/organigrama">Organigrama</a></li>
+          <li class="unique"><a ng-href="#/directorio">Directorio</a></li>
         </ul>
       </li>
       <!--
@@ -241,46 +241,46 @@
         <ul>
           <li><a href="#">Agenda Estratégica</a>
             <ul>
-              <li><a ng-href="#/sistemaIndicadoresProcedimientos">Captura de Evidencias</a></li>
-              <li><a ng-href="/pdf/planeacion/agendaEstrategica/rectoria2017.xlsx" download="Rectoria2017" target="_blank">Rectoría</a></li>
-              <li><a ng-href="/pdf/planeacion/agendaEstrategica/ua2017.xlsx" download="ua2017" target="_blank">San Luis Río Colorado</a></li>
-              <li><a ng-href="/pdf/planeacion/agendaEstrategica/ua2017.xlsx" download="ua2017" target="_blank">Magdalena</a></li>
-              <li><a ng-href="/pdf/planeacion/agendaEstrategica/ua2017.xlsx" download="ua2017" target="_blank">Hermosillo</a></li>
-              <li><a ng-href="/pdf/planeacion/agendaEstrategica/ua2017.xlsx" download="ua2017" target="_blank">Benito Juárez</a></li>
-              <li><a ng-href="/pdf/planeacion/agendaEstrategica/ua2017.xlsx" download="ua2017" target="_blank">Navojoa</a></li>
+              <li id="hideCommingSoon1"><a ng-href="#/sistemaIndicadoresProcedimientos">Captura de Evidencias</a></li>
+              <li class="unique"><a ng-href="/pdf/planeacion/agendaEstrategica/rectoria2017.xlsx" download="Rectoria2017" target="_blank">Rectoría</a></li>
+              <li class="unique"><a ng-href="/pdf/planeacion/agendaEstrategica/ua2017.xlsx" download="ua2017" target="_blank">San Luis Río Colorado</a></li>
+              <li class="unique"><a ng-href="/pdf/planeacion/agendaEstrategica/ua2017.xlsx" download="ua2017" target="_blank">Magdalena</a></li>
+              <li class="unique"><a ng-href="/pdf/planeacion/agendaEstrategica/ua2017.xlsx" download="ua2017" target="_blank">Hermosillo</a></li>
+              <li class="unique"><a ng-href="/pdf/planeacion/agendaEstrategica/ua2017.xlsx" download="ua2017" target="_blank">Benito Juárez</a></li>
+              <li class="unique"><a ng-href="/pdf/planeacion/agendaEstrategica/ua2017.xlsx" download="ua2017" target="_blank">Navojoa</a></li>
             </ul>
           </li>
-          <li><a ng-href="/pdf/planeacion/PDI2015-2019.pdf" target="_blank">Programa de Desarrollo Institucional</a></li>
-          <li><a ng-href="/pdf/planeacion/Programa Institucional de Medio Plazo 2016-2022.pdf" target="_blank">Programa Mediano Plazo</a></li>
+          <li class="unique"><a ng-href="/pdf/planeacion/PDI2015-2019.pdf" target="_blank">Programa de Desarrollo Institucional</a></li>
+          <li class="unique"><a ng-href="/pdf/planeacion/Programa Institucional de Medio Plazo 2016-2022.pdf" target="_blank">Programa Mediano Plazo</a></li>
           <li><a href="#">Presupuesto Anual</a>
             <ul>
               <li><a href="#">Ingresos</a>
                 <ul>
-                  <li><a ng-href="/pdf/planeacion/ingresos/ingresos2015.xlsx" download="ingresos2015" target="_blank">2015</a></li>
-                  <li><a ng-href="/pdf/planeacion/ingresos/ingresos2016.xlsx" download="ingresos2016" target="_blank">2016</a></li>
-                  <li><a ng-href="/pdf/planeacion/ingresos/ingresos2017.xlsx" download="ingresos2017" target="_blank">2017</a></li>
+                  <li class="unique"><a ng-href="/pdf/planeacion/ingresos/ingresos2015.xlsx" download="ingresos2015" target="_blank">2015</a></li>
+                  <li class="unique"><a ng-href="/pdf/planeacion/ingresos/ingresos2016.xlsx" download="ingresos2016" target="_blank">2016</a></li>
+                  <li class="unique"><a ng-href="/pdf/planeacion/ingresos/ingresos2017.xlsx" download="ingresos2017" target="_blank">2017</a></li>
                 </ul>
               </li>
               <li><a href="#">Egresos</a>
                 <ul>
-                  <li><a ng-href="/pdf/planeacion/egresos/egresos2015.xlsx" download="egresos2015" target="_blank">2015</a></li>
-                  <li><a ng-href="/pdf/planeacion/egresos/egresos2016.xlsx" download="egresos2016" target="_blank">2016</a></li>
-                  <li><a ng-href="/pdf/planeacion/egresos/egresos2017.xlsx" download="egresos2017" target="_blank">2017</a></li>
+                  <li class="unique"><a ng-href="/pdf/planeacion/egresos/egresos2015.xlsx" download="egresos2015" target="_blank">2015</a></li>
+                  <li class="unique"><a ng-href="/pdf/planeacion/egresos/egresos2016.xlsx" download="egresos2016" target="_blank">2016</a></li>
+                  <li class="unique"><a ng-href="/pdf/planeacion/egresos/egresos2017.xlsx" download="egresos2017" target="_blank">2017</a></li>
                 </ul>
               </li>
             </ul>
           </li>
-          <li><a ng-href="http://poa.ues.mx/login.aspx" target="_blank">Sistema de Captura POA</a></li>
-          <li><a ng-href="/pdf/planeacion/POA2017.pdf" target="_blank">Evaluación de Metas POA</a></li>
+          <li class="unique"><a ng-href="http://poa.ues.mx/login.aspx" target="_blank">Sistema de Captura POA</a></li>
+          <li class="unique"><a ng-href="/pdf/planeacion/POA2017.pdf" target="_blank">Evaluación de Metas POA</a></li>
           <li><a href="#">Evaluación de Indicadores ETCA</a>
             <ul>
-              <li><a ng-href="/pdf/planeacion/etca/ETCA2015.xlsx" download="ETCA2015" target="_blank">2015</a></li>
-              <li><a ng-href="/pdf/planeacion/etca/ETCA2016.xlsx" download="ETCA2016" target="_blank">2016</a></li>
-              <li><a ng-href="/pdf/planeacion/etca/ETCA2017.xlsx" download="ETCA2017" target="_blank">2017</a></li>
+              <li class="unique"><a ng-href="/pdf/planeacion/etca/ETCA2015.xlsx" download="ETCA2015" target="_blank">2015</a></li>
+              <li class="unique"><a ng-href="/pdf/planeacion/etca/ETCA2016.xlsx" download="ETCA2016" target="_blank">2016</a></li>
+              <li class="unique"><a ng-href="/pdf/planeacion/etca/ETCA2017.xlsx" download="ETCA2017" target="_blank">2017</a></li>
             </ul>
           </li>
-          <li><a ng-href="#/sistemaIndicadoresProcedimientos">Sistema de Indicadores de Procedimientos</a></li>
-          <li><a ng-href="/pdf/planeacion/estudiosInstitucionales.pdf" target="_blank">Estudios Institucionales</a></li>
+          <li id="hideCommingSoon2"><a ng-href="#/sistemaIndicadoresProcedimientos">Sistema de Indicadores de Procedimientos</a></li>
+          <li class="unique"><a ng-href="/pdf/planeacion/estudiosInstitucionales.pdf" target="_blank">Estudios Institucionales</a></li>
         </ul>
       </li>
       <!--
@@ -288,7 +288,7 @@
                   =  NORMATIVIDAD   =
                   ===================
                   -->
-      <li><a ng-href="#/normatividad">Normatividad</a></li>
+      <li class="unique"><a ng-href="#/normatividad">Normatividad</a></li>
       <!--
                   ===================
                   =  ACREDITACIÓN   =
@@ -296,14 +296,14 @@
                   -->
       <li><a href="#">Acreditación</a>
         <ul>
-          <li><a ng-href="#/organismosAcreditadores">Organismos Acreditadores</a></li>
+          <li class="unique"><a ng-href="#/organismosAcreditadores">Organismos Acreditadores</a></li>
           <li><a href="#">Acreditaciones</a>
             <ul>
-              <li><a ng-href="/pdf/acreditaciones/acreditaciones2015.zip" download="acreditaciones2015" target="_blank">2015</a></li>
-              <li><a ng-href="/pdf/acreditaciones/acreditaciones2016.zip" download="acreditaciones2016" target="_blank">2016</a></li>
+              <li class="unique"><a ng-href="/pdf/acreditaciones/acreditaciones2015.zip" download="acreditaciones2015" target="_blank">2015</a></li>
+              <li class="unique"><a ng-href="/pdf/acreditaciones/acreditaciones2016.zip" download="acreditaciones2016" target="_blank">2016</a></li>
             </ul>
           </li>
-          <li><a ng-href="http://35.184.92.106:8000/accounts/login/?next=/" target="_blank">Plataforma de Acreditación</a></li>
+          <li class="unique"><a ng-href="http://35.184.92.106:8000/accounts/login/?next=/" target="_blank">Plataforma de Acreditación</a></li>
         </ul>
       </li>
       <!--
@@ -311,7 +311,7 @@
                   =       SGC       =
                   ===================
                   -->
-      <li><a ng-href="#/sgc">SGC</a></li>
+      <li class="unique"><a ng-href="#/sgc">SGC</a></li>
       <!--
                   ===================
                   =   ESTADÍSTICA   =
@@ -319,65 +319,65 @@
                   -->
       <li class="drop-left"><a href="">Estadística</a>
         <ul>
-          <li><a ng-href="#/numeralia">Numeralia</a></li>
-          <li><a href="#">Documentos Estadísticos</a>
+          <li class="unique"><a ng-href="#/numeralia">Numeralia</a></li>
+          <li class="unique"><a href="#">Documentos Estadísticos</a>
             <ul>
-              <li><a ng-href="/pdf/planeacion/estadistica/documentos-estadisticos/Agenda Estadística 2016.pdf" target="_blank">Agenda Estadística 2016</a></li>
-              <li><a ng-href="/pdf/planeacion/estadistica/documentos-estadisticos/Agenda Estadística 2015.pdf" target="_blank">Agenda Estadística 2015</a></li>
-              <li><a ng-href="/pdf/planeacion/estadistica/documentos-estadisticos/Agenda Estadística 2014.pdf" target="_blank">Agenda Estadística 2014</a></li>
+              <li class="unique"><a ng-href="/pdf/planeacion/estadistica/documentos-estadisticos/Agenda Estadística 2016.pdf" target="_blank">Agenda Estadística 2016</a></li>
+              <li class="unique"><a ng-href="/pdf/planeacion/estadistica/documentos-estadisticos/Agenda Estadística 2015.pdf" target="_blank">Agenda Estadística 2015</a></li>
+              <li class="unique"><a ng-href="/pdf/planeacion/estadistica/documentos-estadisticos/Agenda Estadística 2014.pdf" target="_blank">Agenda Estadística 2014</a></li>
             </ul>
           </li>
-          <li><a ng-href="#/series-estadisticas">Series Estadísticas</a></li>
+          <li class="unique"><a ng-href="#/series-estadisticas">Series Estadísticas</a></li>
           <li><a href="#">Investigación Educativa</a>
             <ul>
               <li><a href="#">Aspirantes</a>
                 <ul>
-                  <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/aspirantes/Aspirantes2015.pdf" target="_blank">Aspirantes 2015</a></li>
-                  <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/aspirantes/Aspirantes2014.pdf" target="_blank">Aspirantes 2014</a></li>
-                  <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/aspirantes/Aspirantes2013.pdf" target="_blank">Aspirantes 2013</a></li>
+                  <li class="unique"><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/aspirantes/Aspirantes2015.pdf" target="_blank">Aspirantes 2015</a></li>
+                  <li class="unique"><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/aspirantes/Aspirantes2014.pdf" target="_blank">Aspirantes 2014</a></li>
+                  <li class="unique"><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/aspirantes/Aspirantes2013.pdf" target="_blank">Aspirantes 2013</a></li>
                 </ul>
               </li>
               <li><a href="#">Egresados</a>
                 <ul>
-                  <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/egresados/Egresado2014.pdf" target="_blank">Egresados 2014</a></li>
-                  <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/egresados/Egresados2012.pdf" target="_blank">Egresados 2012</a></li>
+                  <li class="unique"><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/egresados/Egresado2014.pdf" target="_blank">Egresados 2014</a></li>
+                  <li class="unique"><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/egresados/Egresados2012.pdf" target="_blank">Egresados 2012</a></li>
                 </ul>
               </li>
               <li><a href="#">Opinión</a>
                 <ul>
-                  <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/opinion/Sociedad2014.pdf" target="_blank">Sociedad 2014</a></li>
-                  <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/opinion/Sociedad2013.pdf" target="_blank">Sociedad 2013</a></li>
-                  <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/opinion/Sociedad2012.pdf" target="_blank">Sociedad 2012</a></li>
+                  <li class="unique"><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/opinion/Sociedad2014.pdf" target="_blank">Sociedad 2014</a></li>
+                  <li class="unique"><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/opinion/Sociedad2013.pdf" target="_blank">Sociedad 2013</a></li>
+                  <li class="unique"><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/opinion/Sociedad2012.pdf" target="_blank">Sociedad 2012</a></li>
                 </ul>
               </li>
               <li><a href="#">Satisfacción Docente</a>
                 <ul>
-                  <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/satisfaccion-docente/Docentes2016.pdf"
+                  <li class="unique"><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/satisfaccion-docente/Docentes2016.pdf"
                       target="_blank">Docentes 2016</a></li>
-                  <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/satisfaccion-docente/Docentes2015.pdf"
+                  <li class="unique"><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/satisfaccion-docente/Docentes2015.pdf"
                       target="_blank">Docentes 2015</a></li>
-                  <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/satisfaccion-docente/Docentes2013.pdf"
+                  <li class="unique"><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/satisfaccion-docente/Docentes2013.pdf"
                       target="_blank">Docentes 2013</a></li>
                 </ul>
               </li>
               <li><a href="#">Satisfacción Estudiante</a>
                 <ul>
-                  <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/satisfaccion-estudiantes/Estudiantes2016.pdf"
+                  <li class="unique"><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/satisfaccion-estudiantes/Estudiantes2016.pdf"
                       target="_blank">Estudiantes 2016</a></li>
-                  <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/satisfaccion-estudiantes/Estudiantes2015.pdf"
+                  <li class="unique"><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/satisfaccion-estudiantes/Estudiantes2015.pdf"
                       target="_blank">Estudiantes 2015</a></li>
-                  <li><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/satisfaccion-estudiantes/Estudiantes2013.pdf"
+                  <li class="unique"><a ng-href="/pdf/planeacion/estadistica/investigacion-educativa/satisfaccion-estudiantes/Estudiantes2013.pdf"
                       target="_blank">Estudiantes 2013</a></li>
                 </ul>
               </li>
             </ul>
           </li>
-          <li><a ng-href="#/sieues">SIEUES</a></li>
+          <li class="unique"><a ng-href="#/sieues">SIEUES</a></li>
           <li><a href="#">Prontuarios Estadísticos</a>
             <ul>
-              <li><a ng-href="/pdf/planeacion/estadistica/prontuarios/prontuario2016-1.pptx" download="prontuario2016-1" target="_blank">2016-1</a></li>
-              <li><a ng-href="/pdf/planeacion/estadistica/prontuarios/prontuario2016-2.pptx" download="prontuario2016-2" target="_blank">2016-2</a></li>
-              <li><a ng-href="/pdf/planeacion/estadistica/prontuarios/prontuario2017-1.pptx" download="prontuario2017-1" target="_blank">2017-1</a></li>
+              <li class="unique"><a ng-href="/pdf/planeacion/estadistica/prontuarios/prontuario2016-1.pptx" download="prontuario2016-1" target="_blank">2016-1</a></li>
+              <li class="unique"><a ng-href="/pdf/planeacion/estadistica/prontuarios/prontuario2016-2.pptx" download="prontuario2016-2" target="_blank">2016-2</a></li>
+              <li class="unique"><a ng-href="/pdf/planeacion/estadistica/prontuarios/prontuario2017-1.pptx" download="prontuario2017-1" target="_blank">2017-1</a></li>
             </ul>
           </li>
         </ul>
@@ -387,7 +387,7 @@
                   =     FONDOS      =
                   ===================
                   -->
-      <li><a ng-href="http://www.ues.mx/pagina.aspx?p=24&s=1#" target="_blank">Fondos</a></li>
+      <li class="unique"><a ng-href="http://www.ues.mx/pagina.aspx?p=24&s=1#" target="_blank">Fondos</a></li>
       <!--
                   ===================
                   =  TRANSPARENCIA  =
@@ -395,10 +395,10 @@
                   -->
       <li><a href="#">Transparencia</a>
         <ul>
-          <li><a ng-href="http://consultapublicamx.inai.org.mx:8080/vut-web/" target="_blank">Plataforma Nacional de Transpatencia</a></li>
-          <li><a ng-href="http://transparencia.esonora.gob.mx/Sonora/Transparencia/Poder+Ejecutivo/Entidades/Universidad+Estatal+de+Sonora/"
+          <li class="unique"><a ng-href="http://consultapublicamx.inai.org.mx:8080/vut-web/" target="_blank">Plataforma Nacional de Transpatencia</a></li>
+          <li class="unique"><a ng-href="http://transparencia.esonora.gob.mx/Sonora/Transparencia/Poder+Ejecutivo/Entidades/Universidad+Estatal+de+Sonora/"
               target="_blank">Plataforma de Transparencia Sonora</a></li>
-          <li><a ng-href="http://infomex.sonora.gob.mx/" target="_blank">INFOMEX</a></li>
+          <li class="unique"><a ng-href="http://infomex.sonora.gob.mx/" target="_blank">INFOMEX</a></li>
         </ul>
       </li>
       <!--
@@ -406,7 +406,7 @@
                   =       BLOG      =
                   ===================
                   -->
-      <li><a ng-href="#/blog">Blog</a></li>
+      <li class="unique"><a ng-href="#/blog">Blog</a></li>
     </ul>
   </div>
   <!-- .stellar-nav -->
@@ -465,10 +465,10 @@
   <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
   <script src="bower_components/angular-touch/angular-touch.js"></script>
   <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="bower_components/angular-translate/angular-translate.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
   <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
-  <!--<script>$("#main-nav").css("display","none");</script>-->
   <script>
       $(document).load($(window).bind("resize", checkPosition));
       function checkPosition() {
@@ -478,9 +478,11 @@
           $("#imgDesktopMenu").css("display", "block");
         }
       }
-  </script>
+</script>
+
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
   <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/app.js"></script>
   <script src="scripts/estadistica/TweenMax.min.js"></script>
   <script>
       if (window.innerWidth > 650) {
@@ -489,32 +491,16 @@
         s.src = "scripts/estadistica/canvas.js";
         $("body").append(s);
       }
-  </script>
+</script>
   <script src="scripts/controllers/inicio.js"></script>
   <script src="scripts/controllers/organigrama.js"></script>
   <script src="scripts/controllers/sgc.js"></script>
   <script src="scripts/controllers/normatividad.js"></script>
   <script src="scripts/controllers/blog.js"></script>
   <script src="scripts/controllers/blogAdministrator.js"></script>
-  <script src="scripts/menu/stellarnav.js"></script>
-  <script src="scripts/menu/stellarnav.min.js"></script>
-  <script>
-    jQuery(document).ready(function ($) {
-      jQuery('#main-nav').stellarNav({
-        'theme': 'dark',
-        'phoneBtn': '6624183122',
-        'locationBtn': "https://www.google.com.mx/maps/place/UES+Universidad+Estatal+de+Sonora/@29.0714662,-110.9571351,17z/data=!3m1!4b1!4m5!3m4!1s0x86ce844e084a0607:0xf9058e8eb5fc3269!8m2!3d29.0714662!4d-110.9549464",
-      });
-      if ($(window).width() < 742) {
-        $("#imgDesktopMenu").css("display", "none");
-      } else {
-        $("#imgDesktopMenu").css("display", "block");
-      }
-
-    });
-</script>
-
-  <!--<script src="scripts/services/blogFirebase.js"></script>-->
+  <script src="scripts/controllers/stellarnav.js"></script>
+  <script src="scripts/controllers/stellarnav.min.js"></script>
+  <script src="https://use.fontawesome.com/3f7a913deb.js"></script>
   <!-- endbuild -->
 </body>
 

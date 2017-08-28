@@ -1,40 +1,8 @@
 <div class="estasAqui">
 	<h4 class="estasAquiTexto">
-		<span id="responsive"><strong class="estasAquiColor">Estás aquí :</strong> Quienes Somos / <span class="ubicacionNavegacion">Sistemas de Gestión de Calidad</span></h4>
+		<span id="responsive"><strong class="estasAquiColor">Estás aquí :</strong> Quienes Somos / <span class="ubicacionNavegacion">Sistemas de Gestión de Calidad</span><img id="flags" class="flagsSgc pull-right"  src="{{vm.language? 'images/sgc/mx.png':'images/sgc/usa.png'}}" ng-click="vm.flagAnimationClik(); vm.language =! vm.language;">
+	</h4>
 	</span>
-</div>
-<!--
-==============================
-         Modal Login
-==============================
--->
-<div class="modal fade" id="loginModal" role="dialog">
-	<div class="modal-dialog">
-
-		<!-- Modal content-->
-		<div class="modal-content modalBodyLogin">
-			<div class="modal-body">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<form class="myContainer text-center">
-					<h1 class="loginTitle innerBottomOn">Login Planeación Rectoría</h1>
-					<img src="/images/LogoUes.png" alt="logoUes">
-					<div class="col-xs-11">
-						<div class="input-group loginInputSpaceBottom loginInputSpaceTop">
-							<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-							<input class="form-control" type="text" placeholder="User ID" required>
-						</div>
-						<div class="input-group loginInputSpaceBottom">
-							<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-							<input class="form-control" type="password" placeholder="Password" required>
-						</div>
-					</div>
-					<div class="col-xs-1 loginInputSpaceTop loginBtnSumitSide">
-						<button type="submit" class="btn btn-danger btn-block btn-lg loginBtnSumit"><span class="glyphicon glyphicon-arrow-right loginSumitGlyphicon"></span><div class="loginAcceder"><strong>Acceder</strong></div></button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
 </div>
 
 <!--
@@ -42,11 +10,12 @@
             Banner
 ==============================
 -->
-<div class="row  innerBottomOn">
+<div class="innerBottomOn">
 	<div class="col-xs-2"></div>
 	<div class="col-xs-8 colXs6Responsive">
-		<img src="/images/sgc/imagen1.png" class="img-responsive  banner animated bounceInDown " alt="banner">
+		<img src="images/sgc/imagen1.png" class="img-responsive  banner animated bounceInDown " alt="banner">
 	</div>
+	<div class="col-xs-2"></div>
 </div>
 <div class="myContainer subTitleSpace innerBottomOn">
 	<!--
@@ -54,16 +23,19 @@
             Misión
 ==============================
 -->
+
 	<div class="row rowSpace">
 		<div class="col-xs-6 colXs6Responsive">
-			<img src="/images/sgc/mision2.jpg" class="visibilityHidden sgcImages" id="imgMision" alt="MISIÓN">
+			<img src="images/sgc/mision2.jpg" class="visibilityHidden sgcImages" id="imgMision" alt="MISIÓN">
 		</div>
 		<div class="col-xs-6 visibilityHidden" id="textMision">
-			<h2 class="sgcTitleImages">MISIÓN</h2>
+			<h2 class="sgcTitleImages" ng-hide="vm.language">MISIÓN</h2>
+			<h2 class="sgcTitleImages" ng-show="vm.language">MISSION</h2>
 			<hr class="lineTitleSgc">
-			<h3>Formar profesionistas competitivos en el ámbito nacional e internacional que contribuyan al desarrollo de la sociedad
+			<h3  ng-hide="vm.language">Formar profesionistas competitivos en el ámbito nacional e internacional que contribuyan al desarrollo de la sociedad
 				y atiendan los problemas del entorno mediante innovación, la investigación y los procesos educativos de calidad con profesores
 				de vanguardia que les permitan desempeñarse con excelencia en el ejercicio profesional.</h3>
+				<h3 ng-show="vm.language">Train competitive professionals in the national and international field to contribute in the society and in order to address the environment problems through innovation, research and quality educational processes with vanguard teachers that allows them to perform with excellence in the professional practice.</h3>
 		</div>
 	</div>
 	<!--
@@ -73,13 +45,15 @@
 -->
 	<div class="row rowSpace">
 		<div class="col-xs-6  visibilityHidden colXs6Responsive" id="textVision">
-			<h2 class="sgcTitleImages">VISIÓN 2016-2020</h2>
+			<h2 class="sgcTitleImages" ng-hide="vm.language">VISIÓN 2016-2020</h2>
+			<h2 class="sgcTitleImages" ng-show="vm.language">VISION 2016-2020</h2>
 			<hr class="lineTitleSgc">
-			<h3>La Universidad Estatal de Sonora es reconocida por su calidad en el desempeño de las funciones de docencia, vinculación,
+			<h3 ng-hide="vm.language">La Universidad Estatal de Sonora es reconocida por su calidad en el desempeño de las funciones de docencia, vinculación,
 				extensión e investigación, y por la excelencia de sus egresados.</h3>
+			<h3 ng-show="vm.language">Universidad Estatal de Sonora is recognized for its quality in the performance of the teaching functions, linkage, extension and research, in order for graduates to achieve excellence.</h3>
 		</div>
 		<div class="col-xs-6 colXs6Responsive">
-			<img src="/images/sgc/vision3.jpg" id="imgVision" class="visibilityHidden sgcImages" alt="VISIÓN">
+			<img src="images/sgc/vision3.jpg" id="imgVision" class="visibilityHidden sgcImages" alt="VISIÓN">
 		</div>
 	</div>
 	<!--
@@ -89,14 +63,16 @@
 -->
 	<div class="row rowSpace">
 		<div class="col-xs-6 colXs6Responsive">
-			<img src="/images/sgc/vision.jpg" id="imgPoliticaDeCalidad" class="visibilityHidden sgcImages" alt="POLÍTICA DE CALIDAD">
+			<img src="images/sgc/vision.jpg" id="imgPoliticaDeCalidad" class="visibilityHidden sgcImages" alt="POLÍTICA DE CALIDAD">
 		</div>
 		<div class="col-xs-6 visibilityHidden colXs6Responsive" id="textPoliticaDeCalidad">
-			<h2 class="sgcTitleImages">POLÍTICA DE CALIDAD</h2>
+			<h2 class="sgcTitleImages"  ng-hide="vm.language">POLÍTICA DE CALIDAD</h2>
+			<h2 class="sgcTitleImages"  ng-show="vm.language">QUALITY POLICY</h2>
 			<hr class="lineTitleSgc">
-			<h3>“La Universidad Estatal de Sonora promueve la formación profesional de sus estudiantes, logrando egresados con excelencia,
+			<h3 ng-hide="vm.language">“La Universidad Estatal de Sonora promueve la formación profesional de sus estudiantes, logrando egresados con excelencia,
 				a través de una oferta educativa pertinente que cumple con las necesidades del entorno, mediante una administración ordenada,
 				eficiente y funcional”.</h3>
+			<h3 ng-show="vm.language">“Universidad Estatal de Sonora promotes students professional training development, achieving excellent graduates, through a relevant educational offer that accomplishes the environment needs through an orderly, efficient and functional administration”.</h3>
 		</div>
 	</div>
 	<!--
@@ -106,9 +82,10 @@
 -->
 	<div class="row rowSpace">
 		<div class="col-xs-6 visibilityHidden colXs6Responsive" id="textObjetivosDeCalidad">
-			<h2 class="sgcTitleImages">OBJETIVOS DE CALIDAD</h2>
+			<h2 class="sgcTitleImages" ng-hide="vm.language">OBJETIVOS DE CALIDAD</h2>
+			<h2 class="sgcTitleImages" ng-show="vm.language">QUALITY OBJECTIVES</h2>
 			<hr class="lineTitleSgc">
-			<h3>
+			<h3 ng-hide="vm.language">
 				<ul>
 					<li>
 						Incrementar el ingreso de alumnos a través de una oferta educativa innovadora y pertinente.
@@ -122,9 +99,22 @@
 					</li>
 				</ul>
 			</h3>
+			<h3 ng-show="vm.language">
+				<ul>
+					<li>
+						To increase student’s entry through an innovative and relevant educational offer.
+					</li>
+					<li>
+						To ensure the permanence of our students through educational programs recognized by their quality in order to promote competitive professional training.
+					</li>
+					<li>
+						To promote terminal efficiency with graduates of excellence.
+					</li>
+				</ul>
+			</h3>
 		</div>
 		<div class="col-xs-6 colXs6Responsive">
-			<img src="/images/sgc/objetivo.jpg" id="imgObjetivosDeCalidad" class="visibilityHidden sgcImages" alt="OBJETIVOS DE CALIDAD">
+			<img src="images/sgc/objetivo.jpg" id="imgObjetivosDeCalidad" class="visibilityHidden sgcImages" alt="OBJETIVOS DE CALIDAD">
 		</div>
 	</div>
 	<div class=" container spaceBetweenElements"></div>

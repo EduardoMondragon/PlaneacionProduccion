@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'firebase'
+    'firebase',
+    'pascalprecht.translate'
   ])
   .config(function ($routeProvider, $locationProvider) {
      $locationProvider.hashPrefix('');

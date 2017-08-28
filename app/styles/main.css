@@ -544,13 +544,13 @@ h4.estasAquiTexto{
   background-repeat: no-repeat;
 }
 .fade-carousel .slides .slide-1 {
-  background-image: url(..////images/inicio/slide/u1.jpg);
+  background-image: url(images/inicio/slide/u1.jpg);
 }
 .fade-carousel .slides .slide-2 {
-  background-image: url(../..//images/inicio/slide/slide1.png);
+  background-image: url(images/inicio/slide/slide1.png);
 }
 .fade-carousel .slides .slide-3 {
-  background-image: url(..///images/inicio/slide/slide2.png);
+  background-image: url(images/inicio/slide/slide2.png);
 }
 
 @media screen and (min-width: 980px){/*Media Queries*/
@@ -675,15 +675,12 @@ hr.lineTitle{/*linea para dividir titulos principales de los contenidos*/
 ============================
 */
 
-.btnSgc{
-  margin-top: -47px;
-  margin-right: 10px;
-  background-color: transparent !important;
-  border-radius: 0px!important; 
-}
-
-.btnSgc:hover{
-  background-color: #f39c12 !important;
+.flagsSgc {
+  margin-top:-15px; 
+  padding-left:10px; 
+  cursor:pointer; 
+  width:50px;
+  margin-right:24px!important;
 }
 .banner{
   width: 100%;
@@ -769,7 +766,7 @@ hr.lineTitleSgc{/*linea para dividir titulos principales de los contenidos*/
 }
 @media screen and (max-width:940px ){
   #responsive{
-    font-size: 14px !important;
+    font-size: 12px !important;
   }
   .colXs6Responsive{
     width: 100%;
@@ -1046,7 +1043,6 @@ Acreditacion/organismos acreditadores
     margin-top: 10px;
     font-family: "Open Sans", sans-serif;
     font-size: 25px;
-    cursor: pointer;
   }
   .leerMasBlog{
     display: block;
@@ -1349,6 +1345,9 @@ display:none;
 		margin-top: 50px;
 	}
 }
+.img-thumbnail{
+  min-width: 96%;
+}
 
 /*
 ============================
@@ -1360,7 +1359,7 @@ display:none;
 
 /*login*/
 .bgLoginAdministrator{
-    background-image: url("/images/loginBlog/bgAdministrator4.jpg");
+    background-image: url("images/loginBlog/bgAdministrator4.jpg");
     background-position: center;
    background-repeat: no-repeat;
     background-size: cover;
@@ -1373,7 +1372,7 @@ display:none;
     left: 0;
 }
 .bgLogin {
-    background-image: url("/images/loginBlog/loginBlog.jpg");
+    background-image: url("images/loginBlog/loginBlog.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
