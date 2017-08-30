@@ -63,6 +63,8 @@ angular
       })
       .when('/organismosAcreditadores',{/*organismosAcreditadores*/
         templateUrl: 'views/organismosAcreditadores.html',
+        controller: 'OrganismoAcreditadorCtrl',
+        controllerAs: 'vm',
         resolve: { onLoad: scrollTop }
       })
       .when('/numeralia',{
@@ -81,6 +83,7 @@ angular
         templateUrl: 'views/sistemaIndicadoresProcedimientos.html',
         resolve: { onLoad: scrollTop }
       })
+      
       .otherwise({
         redirectTo: '/'
       });

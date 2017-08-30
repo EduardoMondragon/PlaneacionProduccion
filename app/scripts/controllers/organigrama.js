@@ -34,6 +34,17 @@ var vm = this;
             document.getElementById("unknowText").className = "visibilityVisible";
         }else{
             window.onscroll = function(){imagesAnimated()};
+            if($(window).width() > 1200){ 
+            /*rosario*/
+            document.getElementById("rosario").className = "animated imgOrgIn  figure visibilityVisible";
+            document.getElementById("rosarioText").className = "visibilityVisible";
+            /*dyke*/
+            document.getElementById("dyke").className = "animated imgOrgIn  figure visibilityVisible";
+            document.getElementById("dykeText").className = "visibilityVisible";
+            /*desconocido*/
+            document.getElementById("unknow").className = "animated imgOrgIn  figure visibilityVisible";
+            document.getElementById("unknowText").className = "visibilityVisible";
+        }
             var flag = true;
             function imagesAnimated(){
                 if(document.body.scrollTop > 340 || document.documentElement.scrollTop

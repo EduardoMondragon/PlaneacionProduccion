@@ -20,6 +20,12 @@ angular.module('pApp')
                 $(".myContainerResponsive").css("margin", "10px");
             } else {
                 $(".myContainerResponsive").css("margin-top", "80px");
+                if ($(window).width() > 1400) {
+                    $(".imgNormatividad").css({
+                        "width": "100%",
+                        "height": "350px",
+                    });
+                };
             }
         });
         vm.pdf = [

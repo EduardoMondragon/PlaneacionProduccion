@@ -1,179 +1,169 @@
-<script>
-    $(document).ready(function () { //  this function send top page after load
-        $(window).scrollTop(0);
-    }); 
-</script>
- <!--
+<!--
 ==============================
     Breadcrumb navigation
 ==============================
--->	
+-->
 <div class="estasAqui">
     <h4 class="estasAquiTexto">
-        <strong class="estasAquiColor">Estás aquí :</strong> Acreditación / <span class="ubicacionNavegacion">Organismos Acreditadores</span></h4>  
+        <strong class="estasAquiColor">Estás aquí :</strong> Acreditación / <span class="ubicacionNavegacion">Organismos Acreditadores</span></h4>
 </div>
 
 
 <div class="myContainer  innerTopOn">
-    <div class="row innerBottomOn">  
-<!--
+    <div class="row innerBottomOn">
+        <!--
 ================================================================
                             CACECA
 ================================================================
--->	
-         <div class="col-xs-6 orgBoxImg">
-            <img src="images/acreditacion/7.png" class="imgBox" alt="CACECA" style="width:250px;">
+-->
+        <div class="col-xs-4 responsive">
+            <figure class="snip1336">
+                <div style="background-image:url('{{vm.cacecaHover?'images/acreditacion/7.png':'images/acreditacion/caceca.jpg'}}')" ng-mouseover="vm.cacecaHover =! vm.cacecaHover"
+                    ng-mouseleave="vm.cacecaHover =! vm.cacecaHover" id="img"></div>
+                <figcaption>
+                    <h2>CACECA</h2>
+                    <p>{{vm.caceca | limitTo: vm.cacecaSwitch? '150' :''}}</p>
+                    <a href="" class="follow" ng-click="vm.cacecaSwitch =! vm.cacecaSwitch">{{vm.cacecaSwitch? 'Ver más': 'Ok'}}</a>
+                    <a href="http://caceca.org" target="_blank" class="info">Sitio Oficial</a>
+                </figcaption>
+            </figure>
         </div>
-        <div class="col-xs-6 orgBoxText responsive">
-            <h1>CACECA</h1>
-            <hr class="hr1">
-            <hr class="hr2">
-            <h4 class="text-justify">
-                El CACECA es la institución certificada como Organización Acreditadora de la Educación Superior con el aval del Consejo para la Acreditación de la Educación Superior (COPAES), instancia capacitada y reconocida por el Gobierno Federal, a través de la Secretaría de Educación Pública (SEP), para conferir reconocimiento formal a favor de organizaciones cuyo fin sea acreditar programas académicos de educación superior, en este caso en las áreas Contables y Administrativas.
-            </h4>
-            <a ng-href="http://caceca.org" target="_blank" class="btn btn-block btn-warning">Visitar Sitio Oficial</a>
-        </div>
-<!--
+        <!--
 ================================================================
                             CIEES
 ================================================================
--->	
-        <div class="col-xs-6 orgBoxText">
-             <h1>CIEES</h1>
-            <hr class="hr1">
-            <hr class="hr2">
-            <h4 class="text-justify">
-               Los Comités Interinstitucionales para la Evaluación de la Educación Superior (CIEES) son nueve cuerpos colegiados, integrados por distinguidos académicos de instituciones de educación superior representativos de las diversas regiones del país, que tienen a su cargo la evaluación interinstitucional de programas, funciones, servicios y proyectos ubicados en el quehacer sustantivo de las instituciones.
-            </h4>
-            <a ng-href="http://www.ciees.edu.mx/" target="_blank" class="btn btn-block btn-warning">Visitar Sitio Oficial</a>
+-->
+        <div class="col-xs-4 responsive">
+            <figure class="snip1336">
+                <div style="background-image:url('{{vm.cieesHover?'images/acreditacion/2.png':'images/acreditacion/bg1.jpg'}}')" ng-mouseover="vm.cieesHover =! vm.cieesHover"
+                    ng-mouseleave="vm.cieesHover =! vm.cieesHover" id="img"></div>
+                <figcaption>
+                    <h2>CIEES</h2>
+                    <p>{{vm.ciees | limitTo: vm.cieesSwitch? '150' :''}}</p>
+                    <a href="" class="follow" ng-click="vm.cieesSwitch =! vm.cieesSwitch">{{vm.cieesSwitch? 'Ver más': 'Ok'}}</a>
+                    <a href="http://www.ciees.edu.mx" target="_blank" class="info">Sitio Oficial</a>
+                </figcaption>
+            </figure>
         </div>
-        <div class="col-xs-6 orgBoxImg">
-            <img src="images/acreditacion/2.png" class="imgBox" alt="CIEES">
-        </div>
-<!--
+        <!--
 ================================================================
                             COAPEHUM
 ================================================================
--->	
-        <div class="col-xs-6 orgBoxImg">
-            <img src="images/acreditacion/3.jpg" class="imgBox" alt="COAPEHUM">
+-->
+        <div class="col-xs-4 responsive">
+            <figure class="snip1336">
+                <div style="background-image:url('{{vm.coapehumHover?'images/acreditacion/3.jpg':'http://coapehum.org/images/evaluacion.jpg'}}')" ng-mouseover="vm.coapehumHover =! vm.coapehumHover"
+                    ng-mouseleave="vm.coapehumHover =! vm.coapehumHover" id="img"></div>
+                <figcaption>
+                    <h2>COAPEHUM</h2>
+                    <p>{{vm.coapehum | limitTo: vm.coapehumSwitch? '150' :''}}</p>
+                    <a href="" class="follow" ng-click="vm.coapehumSwitch =! vm.coapehumSwitch">{{vm.coapehumSwitch? 'Ver más': 'Ok'}}</a>
+                    <a href="http://coapehum.org" target="_blank" class="info">Sitio Oficial</a>
+                </figcaption>
+            </figure>
         </div>
-        <div class="col-xs-6 orgBoxText responsive">
-            <h1>COAPEHUM</h1>
-            <hr class="hr1">
-            <hr class="hr2">
-            <h4 class="text-justify">
-                El Consejo para la Acreditación de Programas Educativos en Humanidades, A.C. (COAPEHUM) se encuentra facultado por el Consejo para la Acreditación de la Educación Superior, A.C. para llevar a cabo la revisión y análisis de los programas relativos a las Humanidades en México.
-            </h4>
-            <a ng-href="http://coapehum.org" target="_blank" class="btn btn-block btn-warning">Visitar Sitio Oficial</a>
-        </div>
-<!--
+        <!--
 ================================================================
                             CONCAPREN
 ================================================================
--->	
-        <div class="col-xs-6 orgBoxText">
-             <h1>CONCAPREN</h1>
-            <hr class="hr1">
-            <hr class="hr2">
-            <h4 class="text-justify">
-               El Consejo Nacional para la Calidad de los Programas Educativos en Nutriología, A.C. (CONCAPREN) es un organismo acreditador con una firme convicción de la importancia que representa la calidad de los programas educativos en Nutriología en el país; con la finalidad de contar con preceptos claros, específicos y suficientes para llevar a cabo el proceso de Acreditación de un programa educativo, se establece el Marco de Referencia para el Proceso de Acreditación de los Programas educativos en Nutriología por el Consejo Nacional Para la Calidad de Programas Educativos en Nutriología, A.C. alineado al Marco General de Referencia para los Procesos de Acreditación de Programas Académicos de Tipo Superior (Ver. 3.0) COPAES.
-            </h4>
-            <a ng-href="http://www.concapren.org.mx" target="_blank" class="btn btn-block btn-warning">Visitar Sitio Oficial</a>
+-->
+        <div class="col-xs-4 responsive">
+            <figure class="snip1336">
+                <div style="background-image:url('{{vm.concaprenHover?'images/acreditacion/4.png':'images/acreditacion/bg1.jpg'}}')" ng-mouseover="vm.concaprenHover =! vm.concaprenHover"
+                    ng-mouseleave="vm.concaprenHover =! vm.concaprenHover" id="img"></div>
+                <figcaption>
+                    <h2>CONCAPREN</h2>
+                    <p>{{vm.concapren | limitTo: vm.concaprenSwitch? '150' :''}}</p>
+                    <a href="" class="follow" ng-click="vm.concaprenSwitch =! vm.concaprenSwitch">{{vm.concaprenSwitch? 'Ver más': 'Ok'}}</a>
+                    <a href="http://www.concapren.org.mx" target="_blank" class="info">Sitio Oficial</a>
+                </figcaption>
+            </figure>
         </div>
-        <div class="col-xs-6 orgBoxImg">
-            <img src="images/acreditacion/4.png" class="imgBox" alt="CONCAPREN">
-        </div>
-<!--
+        <!--
 ================================================================
                             CACEB AC
 ================================================================
--->	
-        <div class="col-xs-6 orgBoxImg">
-            <img src="images/acreditacion/5.png" class="imgBox" alt="CABEC AC">
-        </div>
-        <div class="col-xs-6 orgBoxText responsive">
-            <h1>CACEB, A.C.</h1>
-            <hr class="hr1">
-            <hr class="hr2">
-            <h4 class="text-justify">
-                Dada la importancia que para el desarrollo de nuestro País representan las actividades en la formación de recursos humanos capacitados, en el ámbito Biológico, a través de las instituciones de educación tanto de nivel superior como medio superior y técnico profesional, se  constituye el Comité de Acreditación de la Licenciatura en Biología, CACEB, A. C.
-En este contexto el Comite de Acreditacion de la Licenciatura en Biologia, CACEB, A. C., se registra en la Notarias Publicas No. 186 y 217 del D. F., a traves de la escritura 31,498 del 26 de mayo del 2003.
-
-            </h4>
-            <a ng-href="http://caceb.com/" target="_blank" class="btn btn-block btn-warning">Visitar Sitio Oficial</a>
+-->
+        <div class="col-xs-4 responsive">
+            <figure class="snip1336">
+                <div style="background-image:url('{{vm.cacebHover?'images/acreditacion/caceb.jpg':'images/acreditacion/bg1.jpg'}}')" ng-mouseover="vm.cacebHover =! vm.cacebHover"
+                    ng-mouseleave="vm.cacebHover =! vm.cacebHover" id="img"></div>
+                <figcaption>
+                    <h2>CACEB, A.C.</h2>
+                    <p>{{vm.caceb | limitTo: vm.cacebSwitch? '150' :''}}</p>
+                    <a href="" class="follow" ng-click="vm.cacebSwitch =! vm.cacebSwitch">{{vm.cacebSwitch? 'Ver más': 'Ok'}}</a>
+                    <a href="http://caceb.com/" target="_blank" class="info">Sitio Oficial</a>
+                </figcaption>
+            </figure>
         </div>
         <!--
 ================================================================
                             ANPROMAR
 ================================================================
--->	
-        <div class="col-xs-6 orgBoxText">
-             <h1>ANPROMAR</h1>
-            <hr class="hr1">
-            <hr class="hr2">
-            <h4 class="text-justify">
-               Dada la importancia que para el desarrollo de nuestro País representan las actividades que se realizan en el ámbito Marítimo-Pesquero, Acuícola y de las Ciencias del Mar y específicamente la formación de recursos humanos capacitados a través de las instituciones de educación tanto de nivel superior como medio superior y técnico, la Asociación Nacional de Profesionales del Mar, ANPROMAR, A. C., constituye el Comité de Acreditación y Certificación de los Programas Educativos del sector Marítimo Pesquero, Acuícola y de Ciencias del Mar.
-            </h4>
-            <a ng-href="http://www.anpromar.org/" target="_blank" class="btn btn-block btn-warning">Visitar Sitio Oficial</a>
+-->
+        <div class="col-xs-4 responsive">
+            <figure class="snip1336">
+                <div style="background-image:url('{{vm.ampromarHover?'images/acreditacion/anpromar.jpg':'images/acreditacion/bg1.jpg'}}')"
+                    ng-mouseover="vm.ampromarHover =! vm.ampromarHover" ng-mouseleave="vm.ampromarHover =! vm.ampromarHover"
+                    id="img"></div>
+                <figcaption>
+                    <h2>ANPROMAR</h2>
+                    <p>{{vm.ampromar | limitTo: vm.ampromarSwitch? '150' :''}}</p>
+                    <a href="" class="follow" ng-click="vm.ampromarSwitch =! vm.ampromarSwitch">{{vm.ampromarSwitch? 'Ver más': 'Ok'}}</a>
+                    <a href="http://www.anpromar.org/" target="_blank" class="info">Sitio Oficial</a>
+                </figcaption>
+            </figure>
         </div>
-        <div class="col-xs-6 orgBoxImg">
-            <img src="images/acreditacion/anpromar.jpg" class="imgBox" alt="anpromar">
-        </div>
-        
-<!--
+        <!--
 ================================================================
                             CONAIC
 ================================================================
--->	
-        <div class="col-xs-6 orgBoxImg">
-            <img src="images/acreditacion/1.png" class="imgBox" alt="CONAIC">
+-->
+        <div class="col-xs-4 responsive">
+            <figure class="snip1336">
+                <div style="background-image:url('{{vm.conaicHover?'images/acreditacion/1.png':'images/acreditacion/bg1.jpg'}}')" ng-mouseover="vm.conaicHover =! vm.conaicHover"
+                    ng-mouseleave="vm.conaicHover =! vm.conaicHover" id="img"></div>
+                <figcaption>
+                    <h2>CONAIC</h2>
+                    <p>{{vm.conaic | limitTo: vm.conaicSwitch? '150' :''}}</p>
+                    <a href="" class="follow" ng-click="vm.conaicSwitch =! vm.conaicSwitch">{{vm.conaicSwitch? 'Ver más': 'Ok'}}</a>
+                    <a href="http://www.conaic.net/" target="_blank" class="info">Sitio Oficial</a>
+                </figcaption>
+            </figure>
         </div>
-        <div class="col-xs-6 orgBoxText responsive">
-            <h1>CONAIC</h1>
-            <hr class="hr1">
-            <hr class="hr2">
-            <h4 class="text-justify">
-                El CONAIC es una asociación civil con personalidad propia con la única y total responsabilidad de aplicar los procesos y que se basan en estándares y normas establecidas por diferentes organismos evaluadores.
-            </h4>
-            <a ng-href="http://www.conaic.net/" target="_blank" class="btn btn-block btn-warning">Visitar Sitio Oficial</a>
-        </div>
-<!--
+        <!--
 ================================================================
                             ACOMEAA
 ================================================================
--->	
-        <div class="col-xs-6 orgBoxText">
-             <h1>ACOMEAA</h1>
-            <hr class="hr1">
-            <hr class="hr2">
-            <h4 class="text-justify">
-                La Asociación Mexicana de Educación Agrícola Superior A.C. (AMEAS), de común acuerdo con el Comité de Ciencias Agropecuarias de los CIEES impulsaron en forma decidida la creación de un organismo especializado que promueve, evalúa y asegura la calidad y desarrollo de la educación agrícola del país: el Comité Mexicano para la Acreditación de la Educación Agronómica, A.C. (COMEAA) es el cuarto organismo de acreditación, que fue reconocido por el Consejo para la Acreditación de la Educación Superior, A.C. (COPAES).
-            </h4>
-            <a ng-href="http://www.comeaa.org" target="_blank" class="btn btn-block btn-warning">Visitar Sitio Oficial</a>
-        </div>
-        <div class="col-xs-6 orgBoxImg">
-            <img src="images/acreditacion/8.png" class="imgBox" alt="ACOMEAA" style="width:250px;">
+-->
+        <div class="col-xs-4 responsive">
+            <figure class="snip1336">
+                <div style="background-image:url('{{vm.acomeaaHover?'images/acreditacion/8.png':'images/acreditacion/bg1.jpg'}}')" ng-mouseover="vm.acomeaaHover =! vm.acomeaaHover"
+                    ng-mouseleave="vm.acomeaaHover =! vm.acomeaaHover" id="img"></div>
+                <figcaption>
+                    <h2>ACOMEAA</h2>
+                    <p>{{vm.acomeaa | limitTo: vm.acomeaaSwitch? '150' :''}}</p>
+                    <a href="" class="follow" ng-click="vm.acomeaaSwitch =! vm.acomeaaSwitch">{{vm.acomeaaSwitch? 'Ver más': 'Ok'}}</a>
+                    <a href="http://www.comeaa.org" target="_blank" class="info">Sitio Oficial</a>
+                </figcaption>
+            </figure>
         </div>
         <!--
 ================================================================
                             CACEI
 ================================================================
--->	
-        <div class="col-xs-6 orgBoxImg">
-            <img src="images/acreditacion/6.png" class="imgBox" alt="CACEI" style="width:250px;">
-        </div>
-        <div class="col-xs-6 orgBoxText">
-             <h1>CACEI</h1>
-            <hr class="hr1">
-            <hr class="hr2">
-            <h4 class="text-justify">
-               El Consejo de Acreditación de la Enseñanza de la Ingeniería, A.C., (CACEI) es una asociación civil sin fines de lucro. Su objetivo primordial es, mediante la acreditación de los programas educativos en el área de las ingenierías, promover que las instituciones de educación superior (IES) ofrezcan educación de calidad a los futuros egresados.
-El CACEI opera desde julio de 1994, es el primer organismo acreditador de programas de estudios de licenciatura en México y está reconocido por el Consejo para la Acreditación de la Educación Superior, A. C., (Copaes). Actualmente cuenta con el reconocimiento a nivel internacional del Washington Accord, el cual forma parte de la International Engineering Alliance (IEA), es miembro de la Red Iberoamericana de Aseguramiento de la Calidad para la Educación Superior (RIACES), y del Acuerdo de Lima; el cual procura las buenas prácticas en la acreditación de programas en Iberoamérica.
+-->
 
-            </h4>
-            <a ng-href="http://cacei.org.mx/" target="_blank" class="btn btn-block btn-warning">Visitar Sitio Oficial</a>
+        <div class="col-xs-4 responsive">
+            <figure class="snip1336">
+                <div style="background-image:url('{{vm.caceiHover?'images/acreditacion/6.png':'images/acreditacion/bg1.jpg'}}')" ng-mouseover="vm.caceiHover =! vm.caceiHover"
+                    ng-mouseleave="vm.caceiHover =! vm.caceiHover" id="img"></div>
+                <figcaption>
+                    <h2>CACEI</h2>
+                    <p>{{vm.cacei | limitTo: vm.caceiSwitch? '160' :''}}</p>
+                    <a href="" class="follow" ng-click="vm.caceiSwitch =! vm.caceiSwitch">{{vm.caceiSwitch? 'Ver más': 'Ok'}}</a>
+                    <a href="http://cacei.org.mx/" target="_blank" class="info">Sitio Oficial</a>
+                </figcaption>
+            </figure>
         </div>
-    </div>
-</div>
-<div class="innerBottomOn"></div>
+        <div class="innerBottomOn"></div>
